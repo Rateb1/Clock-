@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93%;
+}
+
+body {
+    background-color: #b2b2b2;
+    color: #FFF;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    font-size: 2.4rem;
+    transform: rotate(180deg);
+}
+
+.time__control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(-180deg);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.clock {
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 21rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    transform-origin: top center;
+    animation: adul 6s infinite;
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.clock__hour {
+    transform: rotate(60deg);
+    font-size: 2rem;
+}
+
+.clock__minute {
+    transform: rotate(30deg);
+    font-size: 2.1rem;
+}
+
+.clock__second {
+    transform: rotate(100deg);
+    font-size: 2.2rem;
+}
+
+/* MEDIA QUARRY */
+@media screen and (max-width: 840px) {
+    html {
+        font-size: 60%;
+    }
+
+    .container {
+        min-height: 90vh;
+    }
+}
+
+@media screen and (max-width: 717px) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        min-height: 85vh;
+    }
+}
