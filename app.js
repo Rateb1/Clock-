@@ -32,11 +32,13 @@ function rotateClock() {
         secondHTML[i].innerHTML = `0${date.getSeconds()}`;
       } else secondHTML[i].innerHTML = date.getSeconds();
     }
-    if (date.getHours() >= 12) {
+    if (date.getHours() % 12 >= 12) {
       time__control.innerHTML = "PM";
-      time__control.style.color = "#4afc50";
-    } else time__control.innerHTML = "AM";
-    time__control.style.color = "#ff4500";
+      time__control.style.color = "#ff4500";
+    } else {
+      time__control.innerHTML = "AM";
+      time__control.style.color = "#1ec924";
+    }
 
     hour.style.transform = "rotate(" + (hours * 30 + minutes / 2) + "deg)";
     minute.style.transform = "rotate(" + minutes * 6 + "deg)";
